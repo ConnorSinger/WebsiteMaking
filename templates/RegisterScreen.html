@@ -1,0 +1,22 @@
+<main>
+    <body>
+        <!--the route we use to submit the registration form-->
+        <form action="{{ url_for('registerAction') }}" method="POST">
+            <!--here we display an error if anything goes wrong when we reload the page-->
+            <h1>{{error}}</h1>
+            <h1>Register Your Account</h1>
+
+            <!--Grabbing the inputs (username, email, password)-->
+                <div class = "input-box">
+                    <input type = "text" name = "username" placeholder = "Username" required>
+                </div>
+                <div class = "input-box">
+                    <input type = "text" name = "email" placeholder = "Email" required>
+                </div>
+                <div class = "password-box">
+                    <input type = "password" name = "password" placeholder = "Password" required>
+                </div>
+            <button type="submit">Register</button>
+        </form>
+    </body>
+</main>
